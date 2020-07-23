@@ -6,6 +6,7 @@ import coronaImage from "./images/image.png";
 import Cards from "./Components/Cards"
 import Navbar from "./Components/Navbar"
 import image from "./images/image.png"
+import handwash from "./images/handwash.png"
 import { Container, Grid, Card } from "@material-ui/core";
 
 class App extends React.Component {
@@ -25,15 +26,33 @@ class App extends React.Component {
     const { data, country } = this.state;
     return (
       <Container maxWidth="lg">
-        <Grid container spacing={ 4 } >
-          <Grid item xs={ 12 }>
+        <Grid 
+        container
+        direction="column"
+        alignItems="center"
+        >
+          <Grid item xs={12}>
             <CountryPicker handleCountryChange={this.handleCountryChange} />
           </Grid>
         </Grid>
 
-        <Grid container spacing={ 4 }>
-          <Grid item xs={ 12 }>
-              <Cards data={data} country={country} />
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Cards data={data} country={country} />
+          </Grid>
+        </Grid>
+        
+        <br></br>
+
+        <Grid container spacing={4} alignItems="center" direction="column">
+          <Grid item xs={12}>
+            <h1 className={styles.h1}>How to prevent covid-19</h1>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={5} alignItems="center" direction="column" margin-top='50px'>
+          <Grid item xs={12}>
+            <img classname={image} src={handwash}></img>
           </Grid>
         </Grid>
 
