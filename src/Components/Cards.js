@@ -62,15 +62,11 @@ const Cards = ({
     
   ];
   return (
-    <div className={styles.container}>
-      <Grid container spacing={3} justify="center" className={ cx(styles.container) }>
+      <Grid container spacing={4}>
           <Grid
-            item
-            component={Card}
-            xs={12}
-            className={cx(styles.Card)}
-            style={{ margin: "0px 23.675px", padding: "12px" }}
+            item xs={ 12 } sm={ 6 } md={ 4 }
           >
+            <Card className={ styles.card }>
             <CardContent>
               <Typography variant="subtitle1" className={ cx(styles.subtitle1, styles.colorInfected) }gutterBottom>
                 <b>Infected</b>
@@ -91,16 +87,15 @@ const Cards = ({
                 {new Date(lastUpdate).toLocaleTimeString()}
               </Typography>
             </CardContent>
+            </Card>
           </Grid>
 
+          <br></br>
           
           <Grid
-            item
-            component={Card}
-            xs={12}
-            className={cx(styles.Card)}
-            style={{ margin: "0px 23.675px", padding: "12px" }}
+            item xs={ 12 } sm={ 6 } md={ 4 }
           >
+            <Card className={ styles.card }>
             <CardContent>
               <Typography variant="subtitle1" className={ cx(styles.subtitle1, styles.colorRecovered) }gutterBottom>
                 <b>Recovered</b>
@@ -121,16 +116,15 @@ const Cards = ({
                 {new Date(lastUpdate).toLocaleTimeString()}
               </Typography>
             </CardContent>
+            </Card>
           </Grid>
 
+          <br></br>
 
           <Grid
-            item
-            component={Card}
-            xs={12}
-            className={cx(styles.Card)}
-            style={{ margin: "0px 23.675px", padding: "12px" }}
+            item xs={ 12 } sm={ 6 } md={ 4 }
           >
+            <Card className={ styles.card }>
             <CardContent>
               <Typography variant="subtitle1" className={ cx(styles.subtitle1, styles.colorDied) }gutterBottom>
                 <b>Dead</b>
@@ -151,10 +145,10 @@ const Cards = ({
                 {new Date(lastUpdate).toLocaleTimeString()}
               </Typography>
             </CardContent>
+            </Card>
           </Grid>
         
       </Grid>
-    </div>
   );
 };
 

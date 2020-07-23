@@ -6,6 +6,7 @@ import coronaImage from "./images/image.png";
 import Cards from "./Components/Cards"
 import Navbar from "./Components/Navbar"
 import image from "./images/image.png"
+import { Container, Grid, Card } from "@material-ui/core";
 
 class App extends React.Component {
   state = {
@@ -23,13 +24,20 @@ class App extends React.Component {
   render() {
     const { data, country } = this.state;
     return (
-      <div className={styles.container}>
-        <Navbar></Navbar>
-        <img className={styles.image} src={image} alt="COVID-19" />
-        <br></br>
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Cards data={data} country={country} />
-      </div>
+      <Container maxWidth="lg">
+        <Grid container spacing={ 4 } >
+          <Grid item xs={ 12 }>
+            <CountryPicker handleCountryChange={this.handleCountryChange} />
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={ 4 }>
+          <Grid item xs={ 12 }>
+              <Cards data={data} country={country} />
+          </Grid>
+        </Grid>
+
+      </Container>
     );
   }
 }

@@ -11,6 +11,11 @@ const styles = makeStyles(theme => ({
   formHelperText: {
     textAlign: 'center',
   },
+  selectWrapper: {
+    '&>div': {
+      paddingRight: '0 !important',
+    },
+  },
 }));
 
 const CountryPicker = ({ handleCountryChange }) => {
@@ -25,10 +30,7 @@ const CountryPicker = ({ handleCountryChange }) => {
 
   return (
     <FormControl className={classes.formControl}>
-      <NativeSelect
-        defaultValue=""
-        onChange={(e) => handleCountryChange(e.target.value)}
-      >
+      <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)} className={ classes.selectWrapper }>
         <option value="">Global</option>
         {fetchedCountries.map((country, key) => (
           <option key={key} value={country}>
