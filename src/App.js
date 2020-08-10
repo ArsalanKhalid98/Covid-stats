@@ -13,6 +13,7 @@ import Charts from "./Components/Charts";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
+import Info from "./Pages/Info";
 
 const App = () => {
   return (
@@ -23,7 +24,10 @@ const App = () => {
           exact={true}
           component={Home}
         />
-        
+        <Route 
+          path='/info'
+          component={Info}
+        />
         {/*<Route
           path='/stats'
           render={() => {
