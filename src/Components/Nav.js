@@ -2,12 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 
-const Navbar = (props) => {
+const Nav = (props) => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm " id="header" style={{ position: 'sticky', top: 0, zIndex: 10 }}>
                 <Link className="navbar-brand mr-5 pl-5" to="/" style={{ fontFamily: 'Raleway', fontSize: '25px' }}>
-                    COVID INFO
+                    COVID STATS
                 </Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon text-white"></span>
@@ -28,4 +28,4 @@ const Navbar = (props) => {
     )
 }
 
-export default Navbar
+export default Nav

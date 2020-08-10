@@ -48,19 +48,7 @@ const Cards = ({
   if (!confirmed) {
     return "Loading...";
   }
-  let cardDetails = [
-    {
-      value: confirmed.value,
-    },
-    {
-      value: recovered.value,
-    },
-    {
-      value: deaths.value,
-    }
-    
-    
-  ];
+ 
   return (
       <Grid container spacing={4}>
           <Grid

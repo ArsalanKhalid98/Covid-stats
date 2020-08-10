@@ -2,24 +2,10 @@ import React, { useState, useEffect } from "react";
 import { NativeSelect, FormControl, Select, MenuItem, FormHelperText, makeStyles} from "@material-ui/core";
 import { fetchCountries } from "../api";
 
-const styles = makeStyles(theme => ({
-  formControl: {
-    margin: theme.spacing(1),
-    width: '50%',
-    minWidth: 248,
-  },
-  formHelperText: {
-    textAlign: 'center',
-  },
-  selectWrapper: {
-    '&>div': {
-      paddingRight: '0 !important',
-    },
-  },
-}));
+
 
 const CountryPicker = ({ handleCountryChange }) => {
-    const classes = styles();
+    
   const [fetchedCountries, setFetchedCountries] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => {
@@ -29,8 +15,8 @@ const CountryPicker = ({ handleCountryChange }) => {
   }, [setFetchedCountries]);
 
   return (
-    <FormControl className={classes.formControl}>
-      <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)} className={ classes.selectWrapper }>
+    <FormControl className='col-4 offset-4 mb-5' style={{ border: '1px solid #abc',  borderRadius: '9px', padding: 'auto 5px'  }}>
+      <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)} >
         <option value="">Global</option>
         {fetchedCountries.map((country, key) => (
           <option key={key} value={country}>
@@ -38,9 +24,6 @@ const CountryPicker = ({ handleCountryChange }) => {
           </option>
         ))}
       </NativeSelect>
-      <FormHelperText className={classes.formHelperText}>
-        Select Country
-      </FormHelperText>
     </FormControl>
   );
 };
