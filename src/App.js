@@ -4,12 +4,10 @@ import styles from "./App.module.css";
 import { fetchData } from "./api";
 import coronaImage from "./images/image.png";
 import Cards from "./Components/Cards"
-import Navbar from "./Components/Navbar"
 import Header from "./Components/Header"
 import image from "./images/image.png"
 import handwash from "./images/handwash.png"
 import { Container, Grid, Card } from "@material-ui/core";
-import Charts from "./Components/Charts";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Nav from "./Components/Nav";
 import Home from "./Pages/Home";

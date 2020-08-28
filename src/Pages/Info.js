@@ -27,11 +27,7 @@ const Info = () => {
         <>
              <div className='container-fluid home-container' style={{ height: 'fit-content', overflow: 'hidden', fontFamily: 'Poppins', background: '#fff', paddingLeft: 0, marginLeft: 0, marginTop: 20 }}>
                 <div className="row home-row" height="600px">
-                    
-                    
                     <img src={distance2} alt='Stay Home' className='img-fluid home-img' />
-                    
-                    
                 </div>
             </div>
         </>
