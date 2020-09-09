@@ -17,7 +17,7 @@ const Nav = (props) => {
         
                     <ul className="navbar-nav ml-auto mr-5" style={{fontFamily: 'Poppins' }}>
                         <li className="nav-item mr-3">
-                            <Link className="nav-a text-info" to="/">Home</Link>
+                            <Link className="nav-a text-info" to="/Covid-stats">Home</Link>
                         </li>
                         <li className="nav-item mr-3">
                             <Link className="nav-a text-info" to="/info">Info</Link>
